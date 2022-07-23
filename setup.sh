@@ -58,8 +58,8 @@ if [ -f "/etc/xray/domain" ]; then
 echo "Script Already Installed"
 exit 0
 fi
-mkdir /var/lib/shamrinstore;
-echo "IP=" >> /var/lib/shamrinstore/ipvps.conf
+mkdir /var/lib/shamrin;
+echo "IP=" >> /var/lib/shamrin/ipvps.conf
 wget https://${shamrin}/cf.sh && chmod +x cf.sh && ./cf.sh
 #install ssh ovpn
 wget https://${shamrin}/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
