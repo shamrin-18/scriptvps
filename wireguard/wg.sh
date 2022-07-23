@@ -2,8 +2,8 @@
 # Debian 9 & 10 64bit
 # Ubuntu 18.04 & 20.04 bit
 # Centos 7 & 8 64bit 
-# By shamrin-18
-# My Telegram : https://t.me/shamrin-18
+# By shamrin
+# My Telegram : https://t.me/shamrin
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -24,12 +24,12 @@ echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
 echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/shamrin-18"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/shamrin"
 exit 0
 fi
 # ==================================================
 # Link Hosting Kalian
-shamrin-18="raw.githubusercontent.com/shamrin-18/scriptvps/main/wireguard"
+shamrin="raw.githubusercontent.com/shamrin-18/scriptvps/main/wireguard"
 
 # Check OS version
 if [[ -e /etc/debian_version ]]; then
@@ -48,7 +48,7 @@ if [[ -e /etc/wireguard/params ]]; then
 	exit 1
 fi
 
-echo -e "${Info} Wireguard Script By shamrin-18"
+echo -e "${Info} Wireguard Script By shamrin"
 # Detect public IPv4 address and pre-fill for the user
 
 # Detect public interface and pre-fill for the user
@@ -114,9 +114,9 @@ WG_RUNNING=$?
 
 # Tambahan
 cd /usr/bin
-wget -O addwg "https://${shamrin-18}/addwg.sh"
-wget -O delwg "https://${shamrin-18}/delwg.sh"
-wget -O renewwg "https://${shamrin-18}/renewwg.sh"
+wget -O addwg "https://${shamrin}/addwg.sh"
+wget -O delwg "https://${shamrin}/delwg.sh"
+wget -O renewwg "https://${shamrin}/renewwg.sh"
 chmod +x addwg
 chmod +x delwg
 chmod +x renewwg
