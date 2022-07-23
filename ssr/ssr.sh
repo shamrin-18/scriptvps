@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/shamrin-18
+# My Telegram : https://t.me/shamrin
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -20,11 +20,11 @@ echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
 echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/shamrin-18"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/shamrin"
 exit 0
 fi
 # Link Hosting Kalian
-shamrin-18="raw.githubusercontent.com/shamrin-18/scriptvps/main/ssr"
+shamrin="raw.githubusercontent.com/shamrin-18/scriptvps/main/ssr"
 
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
@@ -149,7 +149,7 @@ if [[ ${OS} == "centos" ]]; then
 }
 Start_SSR(){
 	check_pid
-	wget -O /etc/init.d/ssrmu "https://${shamrin-18}/ssrmu"
+	wget -O /etc/init.d/ssrmu "https://${shamrin}/ssrmu"
 	/etc/init.d/ssrmu start
 }
 Install_SSR(){
@@ -165,9 +165,9 @@ Save_iptables
 Start_SSR
 }
 Install_SSR
-wget -O /usr/bin/ssr https://${shamrin-18}/ssrmu.sh && chmod +x /usr/bin/ssr
-wget -O /usr/bin/addssr https://${shamrin-18}/addssr.sh && chmod +x /usr/bin/addssr
-wget -O /usr/bin/delssr https://${shamrin-18}/delssr.sh && chmod +x /usr/bin/delssr
-wget -O /usr/bin/renewssr https://${shamrin-18}/renewssr.sh && chmod +x /usr/bin/renewssr
+wget -O /usr/bin/ssr https://${shamrin}/ssrmu.sh && chmod +x /usr/bin/ssr
+wget -O /usr/bin/addssr https://${shamrin}/addssr.sh && chmod +x /usr/bin/addssr
+wget -O /usr/bin/delssr https://${shamrin}/delssr.sh && chmod +x /usr/bin/delssr
+wget -O /usr/bin/renewssr https://${shamrin}/renewssr.sh && chmod +x /usr/bin/renewssr
 touch /usr/local/shadowsocksr/akun.conf
 rm -f /root/ssr.sh
