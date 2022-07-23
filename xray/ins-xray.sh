@@ -1,7 +1,7 @@
 #!/bin/bash
 # V2Ray Mini Core Version 4.42.2
-# Script By shamrin-18
-# @ Copyrigt 2021 By shamrin-18
+# Script By shamrin
+# @ Copyrigt 2021 By shamrin
 # =====================================================
 
 # Color
@@ -456,7 +456,7 @@ cat > /etc/xray/trojan.json <<END
       "settings": {
         "clients": [
           {
-            "password": "shamrin-18Project"
+            "password": "shamrinProject"
 #xray-trojan
           }
         ],
@@ -536,8 +536,8 @@ END
 # / / Installation V2Ray Service
 cat > /etc/systemd/system/xray@.service << END
 [Unit]
-Description=Xray Service ( %i ) By shamrin-18
-Documentation=https://t.me/shamrin-18
+Description=Xray Service ( %i ) By shamrin
+Documentation=https://t.me/shamrin
 After=network.target nss-lookup.target
 
 [Service]
@@ -679,9 +679,9 @@ END
 # Installing Trojan Go Service
 cat > /etc/systemd/system/trojan-go.service << END
 [Unit]
-Description=Trojan-Go Service By shamrin-18
-Documentation=https://t.me/shamrin-18
-Documentation=https://github.com/shamrin-18/shamrin-18
+Description=Trojan-Go Service By shamrin
+Documentation=https://t.me/shamrin
+Documentation=https://github.com/shamrin/shamrin
 After=network.target nss-lookup.target
 
 [Service]

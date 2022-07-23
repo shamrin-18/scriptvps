@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/colongvpn
+# My Telegram : https://t.me/shamrin-18
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -14,19 +14,19 @@ LIGHT='\033[0;37m'
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/colongvpn/perizinan/main/ipvps.txt | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/shamrin-18/perizinan/main/ipvps.txt | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
 echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/colongvpn"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/shamrin-18"
 exit 0
 fi
 clear
 echo start
 sleep 0.5
-source /var/lib/colongvpnstore/ipvps.conf
+source /var/lib/shamrin-18store/ipvps.conf
 domain=$IP
 systemctl enable xray@v2ray-tls
 systemctl enable xray@v2ray-nontls
