@@ -47,7 +47,7 @@ fi
 fi
 mkdir /home/sstp
 touch /home/sstp/sstp_account
-touch /var/lib/shamrinstore/data-user-sstp
+touch /var/lib/shamrin/data-user-sstp
 #detail nama perusahaan
 country=ID
 state=Indonesia
@@ -55,7 +55,7 @@ locality=Indonesia
 organization=shamrin
 organizationalunit=shamrin
 commonname=shamrin
-email=shamrinstore@gmail.com
+email=shamrin@gmail.com
 
 #install sstp
 apt-get install -y build-essential cmake gcc linux-headers-`uname -r` git libpcre3-dev libssl-dev liblua5.1-0-dev ppp
