@@ -458,6 +458,7 @@ wget -O addtrgo "https://${shamrinnn}/addtrgo.sh"
 wget -O deltrgo "https://${shamrinnn}/deltrgo.sh"
 wget -O renewtrgo "https://${shamrinnn}/renewtrgo.sh"
 wget -O cektrgo "https://${shamrinnn}/cektrgo.sh"
+wget -O /usr/bin/running https://raw.githubusercontent.com/shamrin-18/scriptvps/main/ssh/running.sh && chmod +x /usr/bin/running && cd /usr/bin && apt install -y dos2unix && dos2unix running
 chmod +x addhost
 chmod +x menu
 chmod +x addssh
