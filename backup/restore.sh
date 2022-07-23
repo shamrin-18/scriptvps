@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/colongvpn
+# My Telegram : https://t.me/shamrin-18
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -14,13 +14,13 @@ LIGHT='\033[0;37m'
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/colongvpn/perizinan/main/ipvps.txt | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/shamrin-18/perizinan/main/ipvps.txt | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
 echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/colongvpn"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/shamrin-18"
 exit 0
 fi
 clear
@@ -42,7 +42,7 @@ cp -r wireguard /etc/
 cp chap-secrets /etc/ppp/
 cp passwd1 /etc/ipsec.d/passwd
 cp ss.conf /etc/shadowsocks-libev/ss.conf
-cp -r colongvpnstore /var/lib/
+cp -r shamrin-18store /var/lib/
 cp -r sstp /home/
 cp -r xray /etc/
 cp -r trojan-go /etc/

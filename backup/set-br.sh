@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/shamrin-18
+# My Telegram : https://t.me/shamrin
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -20,15 +20,15 @@ echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
 echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/shamrin-18"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/shamrin"
 exit 0
 fi
 # Link Hosting Kalian
-shamrin-18="raw.githubusercontent.com/shamrin-18/scriptvps/main/backup"
+shamrin="raw.githubusercontent.com/shamrin-18/scriptvps/main/backup"
 
 curl https://rclone.org/install.sh | bash
 printf "q\n" | rclone config
-wget -O /root/.config/rclone/rclone.conf "https://${shamrin-18}/rclone.conf"
+wget -O /root/.config/rclone/rclone.conf "https://${shamrin}/rclone.conf"
 git clone  https://github.com/magnific0/wondershaper.git
 cd wondershaper
 make install
@@ -46,18 +46,18 @@ account default
 host smtp.gmail.com
 port 587
 auth on
-user shamrin-18store@gmail.com
-from shamrin-18store@gmail.com
+user shamrinstore@gmail.com
+from shamrinstore@gmail.com
 password xbnelgkimafglnva 
 logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
 cd /usr/bin
-wget -O autobackup "https://${shamrin-18}/autobackup.sh"
-wget -O backup "https://${shamrin-18}/backup.sh"
-wget -O restore "https://${shamrin-18}/restore.sh"
-wget -O strt "https://${shamrin-18}/strt.sh"
-wget -O limitspeed "https://${shamrin-18}/limitspeed.sh"
+wget -O autobackup "https://${shamrin}/autobackup.sh"
+wget -O backup "https://${shamrin}/backup.sh"
+wget -O restore "https://${shamrin}/restore.sh"
+wget -O strt "https://${shamrin}/strt.sh"
+wget -O limitspeed "https://${shamrin}/limitspeed.sh"
 chmod +x autobackup
 chmod +x backup
 chmod +x restore
