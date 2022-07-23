@@ -52,7 +52,7 @@ locality=Indonesia
 organization=shamrin
 organizationalunit=shamrin
 commonname=shamrin
-email=shamrinstore@gmail.com
+email=shamrin@gmail.com
 
 # simple password minimal
 wget -O /etc/pam.d/common-password "https://${shamrin}/password"
