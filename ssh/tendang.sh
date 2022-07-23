@@ -1,5 +1,5 @@
 #!/bin/bash
-# Script by : colongvpn
+# Script by : shamrin-18
 #!/bin/bash
 clear
 MAX=1

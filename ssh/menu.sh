@@ -24,8 +24,8 @@ white='\e[1;37m'
 NC='\e[0m'
 
 echo -e "  $CYAN ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo -e "$y          Telegram : https://t.me/colongvpn $wh"
-echo -e "$y        Premium Auto Script By Colonger Vpn Store $wh"
+echo -e "$y          Telegram : @anabilkhoir $wh"
+echo -e "$y        Premium Auto Script $wh"
 echo -e "  $CYAN ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo ""
 echo -e "  $CYAN ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"

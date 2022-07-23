@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/colongvpn
+# My Telegram : https://t.me/shamrin-18
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -14,16 +14,16 @@ LIGHT='\033[0;37m'
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/colongvpn/perizinan/main/ipvps.txt | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/shamrin-18/perizinan/main/ipvps.txt | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
 echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/colongvpn"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/shamrin-18"
 exit 0
 fi
-source /var/lib/colongvpnstore/ipvps.conf
+source /var/lib/shamrin-18store/ipvps.conf
 if [[ "$IP2" = "" ]]; then
 domain=$(cat /etc/xray/domain)
 else
@@ -84,4 +84,4 @@ echo -e "Payload Websocket No TLS"
 echo -e "=============================="
 echo -e "GET / HTTP/1.1[crlf]Host: ${domain}[crlf]Upgrade: websocket[crlf][crlf]"
 echo -e "=============================="
-echo -e "Script By colongvpn"
+echo -e "Script By shamrin-18"

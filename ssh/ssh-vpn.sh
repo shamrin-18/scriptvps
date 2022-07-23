@@ -1,6 +1,6 @@
 #!/bin/bash
-# By shamrin-18
-# My Telegram : https://t.me/shamrin-18
+# By shamrin
+# My Telegram : https://t.me/shamrin
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -21,21 +21,21 @@ echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
 echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/shamrin-18"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/shamrin"
 exit 0
 fi
 # ==================================================
 # Link Hosting Kalian
-shamrin-18="raw.githubusercontent.com/shamrin-18/scriptvps/main/ssh"
+shamrin="raw.githubusercontent.com/shamrin-18/scriptvps/main/ssh"
 
 # Link Hosting Kalian Untuk Xray
-shamrin-18n="raw.githubusercontent.com/shamrin-18/scriptvps/main/xray"
+shamrinn="raw.githubusercontent.com/shamrin-18/scriptvps/main/xray"
 
 # Link Hosting Kalian Untuk Trojan Go
-shamrin-18nn="raw.githubusercontent.com/shamrin-18/scriptvps/main/trojango"
+shamrinnn="raw.githubusercontent.com/shamrin-18/scriptvps/main/trojango"
 
 # Link Hosting Kalian Untuk Stunnel5
-shamrin-18nnn="raw.githubusercontent.com/shamrin-18/scriptvps/main/stunnel5"
+shamrinnnn="raw.githubusercontent.com/shamrin-18/scriptvps/main/stunnel5"
 
 # initializing var
 export DEBIAN_FRONTEND=noninteractive
@@ -49,13 +49,13 @@ ver=$VERSION_ID
 country=ID
 state=Indonesia
 locality=Indonesia
-organization=shamrin-18
-organizationalunit=shamrin-18
-commonname=shamrin-18
-email=shamrin-18store@gmail.com
+organization=shamrin
+organizationalunit=shamrin
+commonname=shamrin
+email=shamrinstore@gmail.com
 
 # simple password minimal
-wget -O /etc/pam.d/common-password "https://${shamrin-18}/password"
+wget -O /etc/pam.d/common-password "https://${shamrin}/password"
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -154,8 +154,8 @@ echo "neofetch" >> .profile
 apt -y install nginx php php-fpm php-cli php-mysql libxml-parser-perl
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-curl https://${shamrin-18}/nginx.conf > /etc/nginx/nginx.conf
-curl https://${shamrin-18}/vps.conf > /etc/nginx/conf.d/vps.conf
+curl https://${shamrin}/nginx.conf > /etc/nginx/nginx.conf
+curl https://${shamrin}/vps.conf > /etc/nginx/conf.d/vps.conf
 sed -i 's/listen = \/var\/run\/php-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php/fpm/pool.d/www.conf
 useradd -m vps;
 mkdir -p /home/vps/public_html
@@ -163,13 +163,13 @@ echo "<?php phpinfo() ?>" > /home/vps/public_html/info.php
 chown -R www-data:www-data /home/vps/public_html
 chmod -R g+rw /home/vps/public_html
 cd /home/vps/public_html
-wget -O /home/vps/public_html/index.html "https://${shamrin-18}/index.html1"
+wget -O /home/vps/public_html/index.html "https://${shamrin}/index.html1"
 /etc/init.d/nginx restart
 cd
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://${shamrin-18}/badvpn-udpgw64"
+wget -O /usr/bin/badvpn-udpgw "https://${shamrin}/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -199,7 +199,7 @@ echo "/usr/sbin/nologin" >> /etc/shells
 # install squid
 cd
 apt -y install squid3
-wget -O /etc/squid/squid.conf "https://${shamrin-18}/squid3.conf"
+wget -O /etc/squid/squid.conf "https://${shamrin}/squid3.conf"
 sed -i $MYIP2 /etc/squid/squid.conf
 
 # Install SSLH
@@ -253,12 +253,12 @@ systemctl enable vnstat
 rm -f /root/vnstat-2.6.tar.gz
 rm -rf /root/vnstat-2.6
 
-mkdir -p /usr/local/shamrin-18
-mkdir -p /etc/shamrin-18
+mkdir -p /usr/local/shamrin
+mkdir -p /etc/shamrin
 
 # install stunnel 5 
 cd /root/
-wget -q -O stunnel5.zip "https://${shamrin-18nnn}/stunnel5.zip"
+wget -q -O stunnel5.zip "https://${shamrinnnn}/stunnel5.zip"
 unzip -o stunnel5.zip
 cd /root/stunnel
 chmod +x configure
@@ -304,11 +304,11 @@ cat > /etc/systemd/system/stunnel5.service << END
 [Unit]
 Description=Stunnel5 Service
 Documentation=https://stunnel.org
-Documentation=https://github.com/shamrin-18
+Documentation=https://github.com/shamrin
 After=syslog.target network-online.target
 
 [Service]
-ExecStart=/usr/local/shamrin-18/stunnel5 /etc/stunnel5/stunnel5.conf
+ExecStart=/usr/local/shamrin/stunnel5 /etc/stunnel5/stunnel5.conf
 Type=forking
 
 [Install]
@@ -316,12 +316,12 @@ WantedBy=multi-user.target
 END
 
 # Service Stunnel5 /etc/init.d/stunnel5
-wget -q -O /etc/init.d/stunnel5 "https://${shamrin-18nnn}/stunnel5.init"
+wget -q -O /etc/init.d/stunnel5 "https://${shamrinnnn}/stunnel5.init"
 
 # Ubah Izin Akses
 chmod 600 /etc/stunnel5/stunnel5.pem
 chmod +x /etc/init.d/stunnel5
-cp /usr/local/bin/stunnel /usr/local/shamrin-18/stunnel5
+cp /usr/local/bin/stunnel /usr/local/shamrin/stunnel5
 
 # Remove File
 rm -r -f /usr/local/share/doc/stunnel/
@@ -341,12 +341,12 @@ systemctl restart stunnel5
 /etc/init.d/stunnel5 restart
 
 #OpenVPN
-wget https://${shamrin-18}/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+wget https://${shamrin}/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 echo; echo 'Installing DOS-Deflate 0.6'; echo
 echo; echo -n 'Downloading source files...'
 apt install -y dnsutils tcpdump dsniff grepcidr
-wget -qO ddos.zip "https://${shamrin-18}/ddos-deflate.zip" > /dev/null 2>&1
+wget -qO ddos.zip "https://${shamrin}/ddos-deflate.zip" > /dev/null 2>&1
 unzip ddos.zip
 cd ddos-deflate
 chmod +x install.sh
@@ -387,10 +387,10 @@ echo "Banner /etc/issue.net" >>/etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 
 # Install BBR
-wget https://${shamrin-18}/bbr.sh && chmod +x bbr.sh && ./bbr.sh
+wget https://${shamrin}/bbr.sh && chmod +x bbr.sh && ./bbr.sh
 
 # Ganti Banner
-wget -O /etc/issue.net "https://${shamrin-18}/issue.net"
+wget -O /etc/issue.net "https://${shamrin}/issue.net"
 
 # blockir torrent
 iptables -A FORWARD -m string --string "get_peers" --algo bm -j DROP
@@ -411,53 +411,53 @@ netfilter-persistent reload
 
 # download script
 cd /usr/bin
-wget -O addhost "https://${shamrin-18}/addhost.sh"
-wget -O about "https://${shamrin-18}/about.sh"
-wget -O menu "https://${shamrin-18}/menu.sh"
-wget -O addssh "https://${shamrin-18}/addssh.sh"
-wget -O trialssh "https://${shamrin-18}/trialssh.sh"
-wget -O delssh "https://${shamrin-18}/delssh.sh"
-wget -O member "https://${shamrin-18}/member.sh"
-wget -O delexp "https://${shamrin-18}/delexp.sh"
-wget -O cekssh "https://${shamrin-18}/cekssh.sh"
-wget -O restart "https://${shamrin-18}/restart.sh"
-wget -O speedtest "https://${shamrin-18}/speedtest_cli.py"
-wget -O info "https://${shamrin-18}/info.sh"
-wget -O ram "https://${shamrin-18}/ram.sh"
-wget -O renewssh "https://${shamrin-18}/renewssh.sh"
-wget -O autokill "https://${shamrin-18}/autokill.sh"
-wget -O ceklim "https://${shamrin-18}/ceklim.sh"
-wget -O tendang "https://${shamrin-18}/tendang.sh"
-wget -O clearlog "https://${shamrin-18}/clearlog.sh"
-wget -O changeport "https://${shamrin-18}/changeport.sh"
-wget -O portovpn "https://${shamrin-18}/portovpn.sh"
-wget -O portwg "https://${shamrin-18}/portwg.sh"
-wget -O porttrojan "https://${shamrin-18}/porttrojan.sh"
-wget -O portsstp "https://${shamrin-18}/portsstp.sh"
-wget -O portsquid "https://${shamrin-18}/portsquid.sh"
-wget -O portv2ray "https://${shamrin-18}/portv2ray.sh"
-wget -O portvless "https://${shamrin-18}/portvless.sh"
-wget -O wbmn "https://${shamrin-18}/webmin.sh"
-wget -O xp "https://${shamrin-18}/xp.sh"
-wget -O running "https://${shamrin-18}/running.sh"
-wget -O swapkvm "https://${shamrin-18}/swapkvm.sh"
-wget -O addv2ray "https://${shamrin-18n}/addv2ray.sh"
-wget -O addvless "https://${shamrin-18n}/addvless.sh"
-wget -O addtrojan "https://${shamrin-18n}/addtrojan.sh"
-wget -O delv2ray "https://${shamrin-18n}/delv2ray.sh"
-wget -O delvless "https://${shamrin-18n}/delvless.sh"
-wget -O deltrojan "https://${shamrin-18n}/deltrojan.sh"
-wget -O cekv2ray "https://${shamrin-18n}/cekv2ray.sh"
-wget -O cekvless "https://${shamrin-18n}/cekvless.sh"
-wget -O cektrojan "https://${shamrin-18n}/cektrojan.sh"
-wget -O renewv2ray "https://${shamrin-18n}/renewv2ray.sh"
-wget -O renewvless "https://${shamrin-18n}/renewvless.sh"
-wget -O renewtrojan "https://${shamrin-18n}/renewtrojan.sh"
-wget -O certv2ray "https://${shamrin-18n}/certv2ray.sh"
-wget -O addtrgo "https://${shamrin-18nn}/addtrgo.sh"
-wget -O deltrgo "https://${shamrin-18nn}/deltrgo.sh"
-wget -O renewtrgo "https://${shamrin-18nn}/renewtrgo.sh"
-wget -O cektrgo "https://${shamrin-18nn}/cektrgo.sh"
+wget -O addhost "https://${shamrin}/addhost.sh"
+wget -O about "https://${shamrin}/about.sh"
+wget -O menu "https://${shamrin}/menu.sh"
+wget -O addssh "https://${shamrin}/addssh.sh"
+wget -O trialssh "https://${shamrin}/trialssh.sh"
+wget -O delssh "https://${shamrin}/delssh.sh"
+wget -O member "https://${shamrin}/member.sh"
+wget -O delexp "https://${shamrin}/delexp.sh"
+wget -O cekssh "https://${shamrin}/cekssh.sh"
+wget -O restart "https://${shamrin}/restart.sh"
+wget -O speedtest "https://${shamrin}/speedtest_cli.py"
+wget -O info "https://${shamrin}/info.sh"
+wget -O ram "https://${shamrin}/ram.sh"
+wget -O renewssh "https://${shamrin}/renewssh.sh"
+wget -O autokill "https://${shamrin}/autokill.sh"
+wget -O ceklim "https://${shamrin}/ceklim.sh"
+wget -O tendang "https://${shamrin}/tendang.sh"
+wget -O clearlog "https://${shamrin}/clearlog.sh"
+wget -O changeport "https://${shamrin}/changeport.sh"
+wget -O portovpn "https://${shamrin}/portovpn.sh"
+wget -O portwg "https://${shamrin}/portwg.sh"
+wget -O porttrojan "https://${shamrin}/porttrojan.sh"
+wget -O portsstp "https://${shamrin}/portsstp.sh"
+wget -O portsquid "https://${shamrin}/portsquid.sh"
+wget -O portv2ray "https://${shamrin}/portv2ray.sh"
+wget -O portvless "https://${shamrin}/portvless.sh"
+wget -O wbmn "https://${shamrin}/webmin.sh"
+wget -O xp "https://${shamrin}/xp.sh"
+wget -O running "https://${shamrin}/running.sh"
+wget -O swapkvm "https://${shamrin}/swapkvm.sh"
+wget -O addv2ray "https://${shamrinn}/addv2ray.sh"
+wget -O addvless "https://${shamrinn}/addvless.sh"
+wget -O addtrojan "https://${shamrinn}/addtrojan.sh"
+wget -O delv2ray "https://${shamrinn}/delv2ray.sh"
+wget -O delvless "https://${shamrinn}/delvless.sh"
+wget -O deltrojan "https://${shamrinn}/deltrojan.sh"
+wget -O cekv2ray "https://${shamrinn}/cekv2ray.sh"
+wget -O cekvless "https://${shamrinn}/cekvless.sh"
+wget -O cektrojan "https://${shamrinn}/cektrojan.sh"
+wget -O renewv2ray "https://${shamrinn}/renewv2ray.sh"
+wget -O renewvless "https://${shamrinn}/renewvless.sh"
+wget -O renewtrojan "https://${shamrinn}/renewtrojan.sh"
+wget -O certv2ray "https://${shamrinn}/certv2ray.sh"
+wget -O addtrgo "https://${shamrinnn}/addtrgo.sh"
+wget -O deltrgo "https://${shamrinnn}/deltrgo.sh"
+wget -O renewtrgo "https://${shamrinnn}/renewtrgo.sh"
+wget -O cektrgo "https://${shamrinnn}/cektrgo.sh"
 chmod +x addhost
 chmod +x menu
 chmod +x addssh

@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/shamrin-18
+# My Telegram : https://t.me/shamrin
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -20,13 +20,13 @@ echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
 echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/shamrin-18"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/shamrin"
 exit 0
 fi
-# By shamrin-18
+# By shamrin
 # ==================================================
 # Link Hosting Kalian
-shamrin-18="raw.githubusercontent.com/shamrin-18/scriptvps/main/ssh"
+shamrin="raw.githubusercontent.com/shamrin-18/scriptvps/main/ssh"
 
 # initialisasi var
 export DEBIAN_FRONTEND=noninteractive
@@ -40,7 +40,7 @@ apt install openvpn easy-rsa unzip -y
 apt install openssl iptables iptables-persistent -y
 mkdir -p /etc/openvpn/server/easy-rsa/
 cd /etc/openvpn/
-wget https://${shamrin-18}/vpn.zip
+wget https://${shamrin}/vpn.zip
 unzip vpn.zip
 rm -f vpn.zip
 chown -R root:root /etc/openvpn/server/easy-rsa/
