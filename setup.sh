@@ -61,6 +61,8 @@ fi
 mkdir /var/lib/shamrin;
 echo "IP=" >> /var/lib/shamrin/ipvps.conf
 wget https://${shamrin}/cf.sh && chmod +x cf.sh && ./cf.sh
+#install v2ray
+wget https://${shamrinnnnnn}/ins-xray.sh && chmod +x ins-xray.sh && screen -S xray ./ins-xray.sh
 #install ssh ovpn
 wget https://${shamrin}/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
 wget https://${shamrinn}/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
@@ -69,8 +71,6 @@ wget https://${shamrinnn}/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
 wget https://${shamrinnnn}/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
 #installwg
 wget https://${shamrinnnnn}/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
-#install v2ray
-wget https://${shamrinnnnnn}/ins-xray.sh && chmod +x ins-xray.sh && screen -S xray ./ins-xray.sh
 #install L2TP
 wget https://${shamrinnnnnnn}/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
 wget https://${shamrinnnnnnnn}/set-br.sh && chmod +x set-br.sh && ./set-br.sh
