@@ -309,6 +309,6 @@ wget -O /usr/bin/addpptp https://${shamrin}/addpptp.sh && chmod +x /usr/bin/addp
 wget -O /usr/bin/delpptp https://${shamrin}/delpptp.sh && chmod +x /usr/bin/delpptp
 wget -O /usr/bin/renewpptp https://${shamrin}/renewpptp.sh && chmod +x /usr/bin/renewpptp
 wget -O /usr/bin/renewl2tp https://${shamrin}/renewl2tp.sh && chmod +x /usr/bin/renewl2tp
-touch /var/lib/shamrinstore/data-user-l2tp
-touch /var/lib/shamrinstore/data-user-pptp
+touch /var/lib/shamrin/data-user-l2tp
+touch /var/lib/shamrin/data-user-pptp
 rm -f /root/ipsec.sh
