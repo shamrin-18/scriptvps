@@ -7,7 +7,7 @@ if [ "$(systemd-detect-virt)" == "openvz" ]; then
 		echo "OpenVZ is not supported"
 		exit 1
 fi
-# My Telegram : https://t.me/shamrin-18
+# My Telegram : https://t.me/shamrin
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -20,25 +20,25 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Link Hosting Kalian Untuk Ssh Vpn
-shamrin-18="raw.githubusercontent.com/shamrin-18/scriptvps/main/ssh"
+shamrin="raw.githubusercontent.com/shamrin-18/scriptvps/main/ssh"
 # Link Hosting Kalian Untuk Sstp
-shamrin-18n="raw.githubusercontent.com/shamrin-18/scriptvps/main/sstp"
+shamrinn="raw.githubusercontent.com/shamrin-18/scriptvps/main/sstp"
 # Link Hosting Kalian Untuk Ssr
-shamrin-18nn="raw.githubusercontent.com/shamrin-18/scriptvps/main/ssr"
+shamrinnn="raw.githubusercontent.com/shamrin-18/scriptvps/main/ssr"
 # Link Hosting Kalian Untuk Shadowsocks
-shamrin-18nnn="raw.githubusercontent.com/shamrin-18/scriptvps/main/shadowsocks"
+shamrinnnn="raw.githubusercontent.com/shamrin-18/scriptvps/main/shadowsocks"
 # Link Hosting Kalian Untuk Wireguard
-shamrin-18nnnn="raw.githubusercontent.com/shamrin-18/scriptvps/main/wireguard"
+shamrinnnnn="raw.githubusercontent.com/shamrin-18/scriptvps/main/wireguard"
 # Link Hosting Kalian Untuk Xray
-shamrin-18nnnnn="raw.githubusercontent.com/shamrin-18/scriptvps/main/xray"
+shamrinnnnnn="raw.githubusercontent.com/shamrin-18/scriptvps/main/xray"
 # Link Hosting Kalian Untuk Ipsec
-shamrin-18nnnnnn="raw.githubusercontent.com/shamrin-18/scriptvps/main/ipsec"
+shamrinnnnnnn="raw.githubusercontent.com/shamrin-18/scriptvps/main/ipsec"
 # Link Hosting Kalian Untuk Backup
-shamrin-18nnnnnnn="raw.githubusercontent.com/shamrin-18/scriptvps/main/backup"
+shamrinnnnnnnn="raw.githubusercontent.com/shamrin-18/scriptvps/main/backup"
 # Link Hosting Kalian Untuk Websocket
-shamrin-18nnnnnnnn="raw.githubusercontent.com/shamrin-18/scriptvps/main/websocket"
+shamrinnnnnnnnn="raw.githubusercontent.com/shamrin-18/scriptvps/main/websocket"
 # Link Hosting Kalian Untuk Ohp
-shamrin-18nnnnnnnnn="raw.githubusercontent.com/shamrin-18/scriptvps/main/ohp"
+shamrinnnnnnnnnn="raw.githubusercontent.com/shamrin-18/scriptvps/main/ohp"
 
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
@@ -49,7 +49,7 @@ echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
 echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/shamrin-18"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/shamrin"
 exit 0
 fi
 rm -f setup.sh
@@ -58,26 +58,26 @@ if [ -f "/etc/xray/domain" ]; then
 echo "Script Already Installed"
 exit 0
 fi
-mkdir /var/lib/shamrin-18store;
-echo "IP=" >> /var/lib/shamrin-18store/ipvps.conf
-wget https://${shamrin-18}/cf.sh && chmod +x cf.sh && ./cf.sh
+mkdir /var/lib/shamrinstore;
+echo "IP=" >> /var/lib/shamrinstore/ipvps.conf
+wget https://${shamrin}/cf.sh && chmod +x cf.sh && ./cf.sh
 #install ssh ovpn
-wget https://${shamrin-18}/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
-wget https://${shamrin-18n}/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
+wget https://${shamrin}/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
+wget https://${shamrinn}/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
 #install ssr
-wget https://${shamrin-18nn}/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
-wget https://${shamrin-18nnn}/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
+wget https://${shamrinnn}/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
+wget https://${shamrinnnn}/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
 #installwg
-wget https://${shamrin-18nnnn}/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
+wget https://${shamrinnnnn}/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
 #install v2ray
-wget https://${shamrin-18nnnnn}/ins-xray.sh && chmod +x ins-xray.sh && screen -S xray ./ins-xray.sh
+wget https://${shamrinnnnnn}/ins-xray.sh && chmod +x ins-xray.sh && screen -S xray ./ins-xray.sh
 #install L2TP
-wget https://${shamrin-18nnnnnn}/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
-wget https://${shamrin-18nnnnnnn}/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+wget https://${shamrinnnnnnn}/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
+wget https://${shamrinnnnnnnn}/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 # Websocket
-wget https://${shamrin-18nnnnnnnn}/edu.sh && chmod +x edu.sh && ./edu.sh
+wget https://${shamrinnnnnnnnn}/edu.sh && chmod +x edu.sh && ./edu.sh
 # Ohp Server
-wget https://${shamrin-18nnnnnnnnn}/ohp.sh && chmod +x ohp.sh && ./ohp.sh
+wget https://${shamrinnnnnnnnnn}/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 
 rm -f /root/ssh-vpn.sh
 rm -f /root/sstp.sh
@@ -92,7 +92,7 @@ rm -f /root/ohp.sh
 cat <<EOF> /etc/systemd/system/autosett.service
 [Unit]
 Description=autosetting
-Documentation=https://t.me/shamrin-18
+Documentation=https://t.me/shamrin
 
 [Service]
 Type=oneshot
@@ -104,14 +104,14 @@ WantedBy=multi-user.target
 EOF
 systemctl daemon-reload
 systemctl enable autosett
-wget -O /etc/set.sh "https://${shamrin-18}/set.sh"
+wget -O /etc/set.sh "https://${shamrin}/set.sh"
 chmod +x /etc/set.sh
 history -c
 echo "2.9" > /home/ver
 echo " "
 echo "Installation has been completed!!"
 echo " "
-echo "=================================-shamrin-18 Project-===========================" | tee -a log-install.txt
+echo "=================================-shamrin Project-===========================" | tee -a log-install.txt
 echo "" | tee -a log-install.txt
 echo "----------------------------------------------------------------------------" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
@@ -159,12 +159,12 @@ echo "   - White Label" | tee -a log-install.txt
 echo "   - Installation Log --> /root/log-install.txt"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   - Dev/Main                : Horas Marolop Amsal Siregar"  | tee -a log-install.txt
-echo "   - Recode                  : shamrin-18" | tee -a log-install.txt
-echo "   - Telegram                : T.me/shamrin-18"  | tee -a log-install.txt
+echo "   - Recode                  : shamrin" | tee -a log-install.txt
+echo "   - Telegram                : T.me/shamrin"  | tee -a log-install.txt
 echo "   - Instagram               : ~"  | tee -a log-install.txt
 echo "   - Whatsapp                : ~"  | tee -a log-install.txt
 echo "   - Facebook                : ~" | tee -a log-install.txt
-echo "----------------------Script Created By shamrin-18 Project----------------------" | tee -a log-install.txt
+echo "----------------------Script Created By shamrin Project----------------------" | tee -a log-install.txt
 echo ""
 echo " Reboot 15 Sec"
 sleep 15
